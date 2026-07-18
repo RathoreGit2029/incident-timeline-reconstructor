@@ -1,0 +1,8 @@
+{
+  "services": [
+    {"name": "gateway", "dependencies": ["auth", "payment"], "clock_skew_seconds": 0},
+    {"name": "auth", "dependencies": [], "clock_skew_seconds": -5},
+    {"name": "payment", "dependencies": ["ledger"], "clock_skew_seconds": 2},
+    {"name": "ledger", "dependencies": [], "clock_skew_seconds": 0}
+  ]
+}

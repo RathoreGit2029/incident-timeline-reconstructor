@@ -1,0 +1,10 @@
+{
+  "sla": {
+    "max_acknowledgement_seconds": 900,
+    "max_mitigation_seconds": 3600
+  },
+  "correlation": {
+    "causality_window_seconds": 600,
+    "debounce_window_seconds": 60
+  }
+}

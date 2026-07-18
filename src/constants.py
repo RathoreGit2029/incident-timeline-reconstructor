@@ -1,0 +1,27 @@
+from enum import Enum
+
+class EventSource(str, Enum):
+    ALERT = "ALERT"
+    DEPLOY = "DEPLOY"
+    TELEMETRY = "TELEMETRY"
+    ACTION = "ACTION"
+
+class EventType(str, Enum):
+    ALERT_TRIGGERED = "ALERT_TRIGGERED"
+    ALERT_RESOLVED = "ALERT_RESOLVED"
+    DEPLOY_STARTED = "DEPLOY_STARTED"
+    DEPLOY_COMPLETED = "DEPLOY_COMPLETED"
+    ROLLBACK_REQUESTED = "ROLLBACK_REQUESTED"
+    SERVICE_RESTARTED = "SERVICE_RESTARTED"
+    INCIDENT_ACKNOWLEDGED = "INCIDENT_ACKNOWLEDGED"
+    ERROR_RATE_SPIKE = "ERROR_RATE_SPIKE"
+    HEALTHY = "HEALTHY"
+
+class IncidentState(str, Enum):
+    NORMAL = "Normal"
+    ALERT_TRIGGERED = "AlertTriggered"
+    ACKNOWLEDGED = "Acknowledged"
+    MITIGATION_RUNNING = "MitigationRunning"
+    RECOVERED = "Recovered"
+    RESOLVED = "Resolved"
+    UNKNOWN = "Unknown"

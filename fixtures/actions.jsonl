@@ -1,0 +1,2 @@
+{"event_id": "c_1", "timestamp": "2026-07-18T06:05:05Z", "source": "ACTION", "event_type": "INCIDENT_ACKNOWLEDGED", "service": "auth", "metadata": {"actor": "bob", "alert_name": "AuthFailures"}}
+{"event_id": "c_2", "timestamp": "2026-07-18T06:10:00Z", "source": "ACTION", "event_type": "SERVICE_RESTARTED", "service": "auth", "metadata": {"actor": "bob"}}
