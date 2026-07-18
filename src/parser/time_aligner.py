@@ -80,7 +80,7 @@ class TimeAligner:
             # Shift offset to UTC
             hours = int(offset_h)
             minutes = int(offset_m)
-            td = timedelta(hours=hours, minutes=minutes)
+            td = timedelta(hours=hours)
             if offset_sign == "-":
                 # If negative offset, add it to find UTC
                 dt = dt + td
