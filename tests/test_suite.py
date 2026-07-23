@@ -390,9 +390,10 @@ class TestIncidentCausalityEngine(unittest.TestCase):
 
 class TestIncidentCommandLineInterface(unittest.TestCase):
     def test_cli_execution_with_valid_files(self):
-        config_dir = "/Users/rahulsingh/mina/repos/rfc2/config"
-        alerts_file = "/Users/rahulsingh/mina/repos/rfc2/fixtures/alerts.jsonl"
-        actions_file = "/Users/rahulsingh/mina/repos/rfc2/fixtures/actions.jsonl"
+        base_dir = Path("/app") if Path("/app").exists() else Path(__file__).parent.parent
+        config_dir = str(base_dir / "config")
+        alerts_file = str(base_dir / "fixtures/alerts.jsonl")
+        actions_file = str(base_dir / "fixtures/actions.jsonl")
         
         args = [
             "--config", config_dir,
